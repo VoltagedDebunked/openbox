@@ -75,7 +75,7 @@ Camera2D camera = {0};
 std::unordered_map<ParticleType, ParticleProperties> particleProps = {
     {ParticleType::SAND, {GOLD, true, false, 1.5f, 20.0f, 0.2f, 0.0f, -1}},
     {ParticleType::WATER, {BLUE, true, false, 1.0f, 20.0f, 0.5f, 0.8f, -1}},
-    {ParticleType::WALL, {DARKGRAY, false, false, 999.0f, 20.0f, 0.1f, 0.0f, -1}},  // Updated to DARKGRAY
+    {ParticleType::WALL, {DARKGRAY, false, false, 999.0f, 20.0f, 0.1f, 0.0f, -1}},
     {ParticleType::FIRE, {RED, true, false, 0.1f, 800.0f, 1.0f, 0.0f, 100}},
     {ParticleType::SMOKE, {DARKGRAY, true, false, 0.2f, 100.0f, 0.1f, 0.3f, 200}},
     {ParticleType::STEAM, {LIGHTGRAY, true, false, 0.3f, 100.0f, 0.3f, 0.2f, 150}},
@@ -506,7 +506,7 @@ void DrawUI() {
     }
     
     // Draw controls help
-    currentY = SCREEN_HEIGHT - 150;
+    currentY = SCREEN_HEIGHT - 220;
     DrawText("Controls:", 10, currentY, 20, WHITE);
     currentY += lineHeight;
     DrawText("1-9: Select particle type", 10, currentY, 20, WHITE);
@@ -516,6 +516,12 @@ void DrawUI() {
     DrawText("Space: Pause/Resume", 10, currentY, 20, WHITE);
     currentY += lineHeight;
     DrawText("R: Reset simulation", 10, currentY, 20, WHITE);
+    currentY += lineHeight;
+    DrawText("M: Symmetry Mode", 10, currentY, 20, WHITE);
+    currentY += lineHeight;
+    DrawText("S: Save Simulation to File", 10, currentY, 20, WHITE);
+    currentY += lineHeight;
+    DrawText("L: Load Simulation from File", 10, currentY, 20, WHITE);
 }
 
 void HandleInput() {
